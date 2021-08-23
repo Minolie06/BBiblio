@@ -15,7 +15,7 @@
 
 /* MENU */
 .menu {
-    background-color: var(--dark-grey);
+    background-color: var(--medium-dark-grey);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -28,21 +28,31 @@
     padding: 0 1em;
 }
 
+.menu ul {
+    margin: 0;
+}
+
 .menu li {
     list-style-type: none;
     display: inline-block;
-    margin: 0 1em;
-    height: 100%;
 }
 
 .menu a {
     text-decoration: none;
     color: white;
+    display: inline-block;
     width: 100%;
+    line-height: 4rem;
+    padding: 0 1rem;
 }
 
-.menu a:hover {
-    color: var(--accent-color);
+.menu li a:hover {
+    background-color: var(--dark-grey);
+}
+
+.menu .active a {
+    background-color: var(--accent-color);
+    color: var(--dark-grey);
 }
 
 /* MAIN */

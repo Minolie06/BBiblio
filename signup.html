@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BBiblio</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="menu">
+            <h1><a href="index.html"><span class="colored">BB</span>iblio</a></h1>
+            <ul>
+                <li><a href="oeuvres.html">Oeuvres</a></li>
+                <li><a href="reglement.html">Règlement</a></li>
+                <li><a href="historique.html">Historique</a></li>
+                <li><a href="signup.html">Participez</a></li>
+            </ul>
+            <div class="login">
+                <!-- TO DO: connexion box-->
+                <p>logo + connexion</p>
+            </div>
+         </nav>
+        <main>
+            <div class="signup">
+                <h2>Inscription</h2>
+                <p>message to explain</p>
+                <form>
+                    <label for="signup_role">Je veux participez à ce concours en tant que :</label>
+                    <select id="signup_role">
+                        <option value="author">Auteur/Editeur</option>
+                        <option value="jure">Juré</option>
+                    </select>
+                    <label for="signup_email">Email</label>
+                    <input type="text" id="signup_email"/>
+                    <label for="signup_who">Qui êtes-vous ?</label>
+                    <input type="text" id="signup_who"/>
+                    <label for="signup_goal">Pourquoi voulez-vous participez à ce concours ? Expliquez vos motivations :</label>
+                    <input type="text" id="signup_goal"/>
+                    <input type="submit" value="Valider"/>
+                </form>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
