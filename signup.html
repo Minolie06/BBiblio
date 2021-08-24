@@ -12,29 +12,25 @@
                 <li><a href="oeuvres.html">Oeuvres</a></li>
                 <li><a href="reglement.html">Règlement</a></li>
                 <li><a href="historique.html">Historique</a></li>
-                <li><a href="signup.html">Participez</a></li>
+                <li class="active"><a href="signup.html">Participez</a></li>
             </ul>
             <div class="login">
                 <!-- TO DO: connexion box-->
-                <p>logo + connexion</p>
+                <p><a href="connexion.html">connexion</a></p>
             </div>
          </nav>
         <main>
             <div class="signup">
-                <h2>Inscription</h2>
-                <p>message to explain</p>
-                <form>
-                    <label for="signup_role">Je veux participez à ce concours en tant que :</label>
-                    <select id="signup_role">
+                <h1>Participez à l'édition 2021 du concours</h1>
+                <form action="signup_message.html">
+                    <label for="signup_type">Je veux participez à ce concours en tant que :</label>
+                    <select id="signup_type">
                         <option value="author">Auteur/Editeur</option>
-                        <option value="jure">Juré</option>
+                        <option value="jury">Membre du jury</option>
                     </select>
-                    <label for="signup_email">Email</label>
-                    <input type="text" id="signup_email"/>
-                    <label for="signup_who">Qui êtes-vous ?</label>
-                    <input type="text" id="signup_who"/>
-                    <label for="signup_goal">Pourquoi voulez-vous participez à ce concours ? Expliquez vos motivations :</label>
-                    <input type="text" id="signup_goal"/>
+                    <input type="text" id="signup_email" placeholder="Adresse email"/>
+                    <input type="text" id="signup_who" placeholder="Qui êtes-vous ?"/>
+                    <input type="text" id="signup_motiv" placeholder="Pourquoi voulez-vous participez à ce concours ? Expliquez vos motivations :"/>
                     <input type="submit" value="Valider"/>
                 </form>
             </div>

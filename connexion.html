@@ -16,13 +16,23 @@
             </ul>
             <div class="login">
                 <!-- TO DO: connexion box-->
-                <p>logo + connexion</p>
+                <p><a href="connexion.html">connexion</a></p>
             </div>
          </nav>
         <main>
             <div class="login">
-                connexion
-            </siv>  
+                <h1>Connectez-vous</h1>
+                <form action="first_co.html">
+                    <label for="account_type">En tant que : </label>
+                    <select id="account_type">
+                        <option value="author">Auteur/Editeur</option>
+                        <option value="jury">Membre du jury</option>
+                    </select>
+                    <input type="text" id="co_email" placeholder="Adresse email" />
+                    <input type="text" id="co_pass" placeholder="Mot de passe" />
+                    <input type="submit" value="Connexion" />
+                </form>
+            </div>  
         </main>
         <script src="script.js"></script>
     </body>

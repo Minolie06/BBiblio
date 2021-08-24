@@ -46,7 +46,7 @@
     padding: 0 1rem;
 }
 
-.menu li a:hover {
+.menu li:not(.active) a:hover {
     background-color: var(--dark-grey);
 }
 
@@ -58,5 +58,7 @@
 /* MAIN */
 
 main {
-    margin-top: 4rem;
+    margin: 5rem auto 0 auto;
+    width: 80%;
+    text-align: center;
 }
