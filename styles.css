@@ -27,10 +27,6 @@ h1::first-letter {
     font-size: larger;
 }
 
-.hidden {
-    display: none;
-}
-
 /* MENU */
 .menu {
     background-color: var(--medium-dark-grey);
@@ -197,7 +193,16 @@ input[type="submit"]:hover, button:hover {
     resize: vertical;
 }
 
+/* PREMIERE CONNEXION */
 
+.error {
+    display: none;
+    color: red;
+}
+
+.error.visible {
+    display: block;
+}
 
 
 

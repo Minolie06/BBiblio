@@ -24,20 +24,21 @@
                 <h1>Bienvenue sur votre compte</h1>
                 <form>
                     <label for="account_type">Veuillez choisir un nouveau mot de passe: </label>
-                    <input type="text" id="pass_new" placeholder="Choisissez votre mot de passe" />
-                    <input type="text" id="pass_test" placeholder="Confirmez votre mot de passe" />
+                    <input type="password" id="pass_first" placeholder="Choisissez votre mot de passe" />
+                    <input type="password" id="pass_second" placeholder="Confirmez votre mot de passe" />
                     <button type="button" id="btn_newpass">Valider</button>
                     <p id="error_invalid" class="error">
                         Votre nouveau mot de passe doit comprendre 10 caractères minimum,
                         dont au moins une majuscule et un chiffre.
                     </p>
-                    <p class="error">
-                        Message erreur mdp confirmation différent BLABLABLA
+                    <p id="error_different" class="error">
+                        Les deux entrées de mot de passe sont différentes.
+                        Veuillez confirmez votre mot de passe à nouveau.
                     </p>
                 </form>
                 
             </div>  
         </main>
-        <script src="script.js"></script>
+        <script src="scripts/co1.js"></script>
     </body>
 </html>
