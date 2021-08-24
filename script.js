@@ -3,7 +3,7 @@ function connexion() {
 
     switch (typeAccount.value) {
         case "author":
-            window.location.href="auteur.html";
+            window.location.href="co1.html";
             break;
         case "jury":
             window.location.href="jury.html";

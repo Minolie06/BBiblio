@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BBiblio</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="menu">
+            <span class="logo"><a href="index.html"><span class="colored">BB</span>iblio</a></span>
+            <ul>
+                <li><a href="oeuvres.html">Oeuvres</a></li>
+                <li><a href="reglement.html">Règlement</a></li>
+                <li><a href="historique.html">Historique</a></li>
+                <li><a href="signup.html">Participez</a></li>
+            </ul>
+            <div class="login">
+                <!-- TO DO: connexion box-->
+                <p><a href="connexion.html">Connexion</a></p>
+            </div>
+         </nav>
+        <main>
+            <div class="content login">
+                <h1>Bienvenue sur votre compte</h1>
+                <form>
+                    <label for="account_type">Veuillez choisir un nouveau mot de passe: </label>
+                    <input type="text" id="pass_new" placeholder="Choisissez votre mot de passe" />
+                    <input type="text" id="pass_test" placeholder="Confirmez votre mot de passe" />
+                    <button type="button" id="btn_newpass">Valider</button>
+                    <p id="error_invalid" class="error">
+                        Votre nouveau mot de passe doit comprendre 10 caractères minimum,
+                        dont au moins une majuscule et un chiffre.
+                    </p>
+                    <p class="error">
+                        Message erreur mdp confirmation différent BLABLABLA
+                    </p>
+                </form>
+                
+            </div>  
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
