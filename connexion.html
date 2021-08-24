@@ -22,15 +22,17 @@
         <main>
             <div class="content login">
                 <h1>Connectez-vous</h1>
-                <label for="account_type">En tant que : </label>
-                <select id="account_type">
-                    <option value="author">Auteur/Editeur</option>
-                    <option value="jury">Membre du jury</option>
-                    <option value="admin">Administrateur</option>
-                </select>
-                <input type="text" id="co_email" placeholder="Adresse email" />
-                <input type="text" id="co_pass" placeholder="Mot de passe" />
-                <button type="button" id="btn_co" onclick=connexion()>Connexion</button>
+                <form>
+                    <label for="account_type">En tant que : </label>
+                    <select id="account_type">
+                        <option value="author">Auteur/Editeur</option>
+                        <option value="jury">Membre du jury</option>
+                        <option value="admin">Administrateur</option>
+                    </select>
+                    <input type="text" id="co_email" placeholder="Adresse email" />
+                    <input type="text" id="co_pass" placeholder="Mot de passe" />
+                    <button type="button" id="btn_co" onclick=connexion()>Connexion</button>
+                </form>
             </div>  
         </main>
         <script src="script.js"></script>

@@ -87,13 +87,13 @@ main .content {
 
 }
 
-/* CONNEXION */
+/* OEUVRES + HISTORIQUE*/
 
-main .login {
-
+.card {
+    background-color: var(--light-grey);
+    width: max-content;
+    margin: 0 auto;
 }
-
-/* OEUVRES */
 
 .book_cards {
     margin: 1rem 0;
@@ -103,27 +103,100 @@ main .login {
     text-align: center;
 }
 
-.book_cards::after {
-    content: "";
-    flex: auto;
-  }
-
 .oeuvres .filter {
     text-align: right;
 }
-
-.card {
-    background-color: var(--light-grey);
-    width: max-content;
-    margin: 0 auto;
-}
-
-/* HISTORIQUE */
 
 .historique .year {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
+
+/* OEUVRE + GAGNANT*/
+
+.book {
+    display: flex;
+    column-gap: 3rem;;
+}
+
+.book_info p {
+    font-size: 1.5rem;
+}
+
+.book_info p::first-letter {
+    color: var(--accent-color);
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.synopsis, .author_bio {
+    margin-top: 2rem;
+}
+
+.section_title {
+    color: var(--accent-color);
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.border_left {
+    text-align: justify;
+    padding: 0 2rem;
+    border-left: 2px solid var(--accent-color);
+}
+
+.book_info a {
+    color: var(--accent-color);
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+/* OEUVRE: JURY */
+
+.notation_inner {
+    padding: 0 2rem;
+    border-left: 2px solid var(--accent-color);
+}
+
+/* FORMULAIRES: PARTICIPEZ + CONNEXION */
+
+form {
+    text-align: center;
+}
+
+form label, form select, form input{
+    width: 350px;
+    height: 50px;
+    margin: 0.5rem calc(50% - 175px);
+}
+
+input[type="submit"], button {
+    width: 250px;
+    height: 50px;
+    margin: 0.5rem calc(50% - 125px);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: white;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: white;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.signup form textarea {
+    width: 350px;
+    height: 300px;
+    margin: 0.5rem calc(50% - 175px);
+    resize: vertical;
+}
+
+
+
 
 

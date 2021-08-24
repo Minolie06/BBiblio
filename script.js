@@ -1,5 +1,4 @@
 function connexion() {
-    var btnCo = document.getElementById("btn_co");
     var typeAccount = document.getElementById("account_type");
 
     switch (typeAccount.value) {
@@ -14,3 +13,4 @@ function connexion() {
             break;
     }
 }
+
