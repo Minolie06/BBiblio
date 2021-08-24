@@ -2,12 +2,12 @@
 <html>
     <head>
         <title>BBiblio</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <nav class="menu">
-            <h1><a href="index.html"><span class="colored">BB</span>iblio</a></h1>
+            <span class="logo"><a href="index.html"><span class="colored">BB</span>iblio</a></span>
             <ul>
                 <li class="active"><a href="oeuvres.html">Oeuvres</a></li>
                 <li><a href="reglement.html">Règlement</a></li>
@@ -16,25 +16,78 @@
             </ul>
             <div class="login">
                 <!-- TO DO: connexion box-->
-                <p><a href="connexion.html">connexion</a></p>
+                <p><a href="connexion.html">Connexion</a></p>
             </div>
          </nav>
         <main>
-            <div class="oeuvres">
-                <select id="categories">
-                    <option value="all_cat">Toutes les catégories</option>
-                    <option value="roman_fr">Roman français</option>
-                    <option value="roman_etr">Roman étranger</option>
-                    <option value="docu">Documentaire</option>
-                    <option value="bio">Biographie</option>
-                </select>
-                <div class="card">
-                    <div class="cover">
-                        <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+            <div class="content oeuvres">
+                <div class="filter">
+                    <select id="categories">
+                        <option value="all_cat">Toutes les catégories</option>
+                        <option value="roman_fr">Roman français</option>
+                        <option value="roman_etr">Roman étranger</option>
+                        <option value="docu">Documentaire</option>
+                        <option value="bio">Biographie</option>
+                    </select>
+                    <input type="text" id="search" placeholder="Rechercher une oeuvre" />
+                </div>
+                <div class="book_cards">
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
                     </div>
-                    <p class="title">
-                        Titre
-                    </p>
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="cover">
+                            <a href="oeuvres/oeuvre_template.html"><img src="images/cover.png"/></a>
+                        </div>
+                        <p class="title">
+                            Titre
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>

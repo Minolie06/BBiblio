@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 :root {
@@ -7,10 +10,21 @@
     --accent-color-light: #F6B352;
     --dark-grey : #1F2124;
     --medium-dark-grey: #383A3F;
+    --light-grey: #a8a8a8;
 }
 
 .colored {
     color: var(--accent-color);
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h1::first-letter {
+    color: var(--accent-color);
+    font-size: larger;
 }
 
 /* MENU */
@@ -55,10 +69,61 @@
     color: var(--dark-grey);
 }
 
+.menu .logo {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
 /* MAIN */
 
 main {
-    margin: 5rem auto 0 auto;
-    width: 80%;
+    margin-top: 5rem;
+}
+
+main .content {
+    width: 65%;
+    margin: 0 auto;
+
+}
+
+/* CONNEXION */
+
+main .login {
+
+}
+
+/* OEUVRES */
+
+.book_cards {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
     text-align: center;
 }
+
+.book_cards::after {
+    content: "";
+    flex: auto;
+  }
+
+.oeuvres .filter {
+    text-align: right;
+}
+
+.card {
+    background-color: var(--light-grey);
+    width: max-content;
+    margin: 0 auto;
+}
+
+/* HISTORIQUE */
+
+.historique .year {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+

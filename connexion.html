@@ -2,12 +2,12 @@
 <html>
     <head>
         <title>BBiblio</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <nav class="menu">
-            <h1><a href="index.html"><span class="colored">BB</span>iblio</a></h1>
+            <span class="logo"><a href="index.html"><span class="colored">BB</span>iblio</a></span>
             <ul>
                 <li><a href="oeuvres.html">Oeuvres</a></li>
                 <li><a href="reglement.html">Règlement</a></li>
@@ -16,22 +16,21 @@
             </ul>
             <div class="login">
                 <!-- TO DO: connexion box-->
-                <p><a href="connexion.html">connexion</a></p>
+                <p><a href="connexion.html">Connexion</a></p>
             </div>
          </nav>
         <main>
-            <div class="login">
+            <div class="content login">
                 <h1>Connectez-vous</h1>
-                <form action="first_co.html">
-                    <label for="account_type">En tant que : </label>
-                    <select id="account_type">
-                        <option value="author">Auteur/Editeur</option>
-                        <option value="jury">Membre du jury</option>
-                    </select>
-                    <input type="text" id="co_email" placeholder="Adresse email" />
-                    <input type="text" id="co_pass" placeholder="Mot de passe" />
-                    <input type="submit" value="Connexion" />
-                </form>
+                <label for="account_type">En tant que : </label>
+                <select id="account_type">
+                    <option value="author">Auteur/Editeur</option>
+                    <option value="jury">Membre du jury</option>
+                    <option value="admin">Administrateur</option>
+                </select>
+                <input type="text" id="co_email" placeholder="Adresse email" />
+                <input type="text" id="co_pass" placeholder="Mot de passe" />
+                <button type="button" id="btn_co" onclick=connexion()>Connexion</button>
             </div>  
         </main>
         <script src="script.js"></script>
