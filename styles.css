@@ -11,7 +11,7 @@
     --accent-color-light: #F6B352;
     --dark-grey : #1F2124;
     --medium-dark-grey: #383A3F;
-    --light-grey: #a8a8a8;
+    --light-grey: #dbdbdb;
 }
 
 .colored {
@@ -120,7 +120,6 @@ h2 {
     margin-top: 4px;
 }
 
-/* affiché uniquement quand l'utilisateur est connecté */
 .hidden {
     display:none;
 }
@@ -134,7 +133,7 @@ main {
 }
 
 main .content {
-    width: 65%;
+    width: 75%;
     margin: 0 auto;
 
 }
@@ -321,7 +320,7 @@ form textarea {
     grid-template-columns: 20% auto;
     grid-template-areas: 'sidebar to_note '
                         'sidebar noted';
-    column-gap: 2rem;
+    column-gap: 1rem;
 }
 
 #to_note {
@@ -340,11 +339,8 @@ form textarea {
 
 /* #region SIDEBAR */
 
-.sidebar {
-    background-color: var(--light-grey);
-}
-
 .sidebar>div {
+    background-color: var(--light-grey);
     padding: .8rem;
     width: 100%;
     margin: 0;
@@ -359,17 +355,33 @@ form textarea {
     background-color: var(--accent-color);
 }
 
-.cat_filter {
-    border-top: 2rem solid white;
+.sidebar .cat_filter {
+    margin-top: 1rem;
 }
 
 .cat_filter .item {
     margin: .5rem 0 0 1rem;
 }
 
-.table {
-    border: 1px solid black;
+/* #endregion */
+
+/* #region TABLE */
+
+.table table {
+    width: 100%;
 }
 
+.table table thead {
+    background-color: var(--accent-color);
+    text-align: center;
+    font-weight: bold;
+    height: 2rem;
+}
 
-/* #endregion */
+.table table tr:nth-child(even) {
+    background-color: #f6b35230;
+}
+
+.table a {
+    color: black;
+}

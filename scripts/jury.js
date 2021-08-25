@@ -4,6 +4,13 @@ var choiceNoted = document.getElementById("choice_noted");
 var tableToNote = document.getElementById("table_to_note");
 var tableNoted = document.getElementById("table_noted");
 
+var listToNote = ["oeuvres/oeuvre_template.html","Le Seigneur des Anneaux", "J.R.R. Tolkien", "Roman étranger"];
+var tbodyToNote = document.getElementById("body_to_note");
+
+var listNoted = ["oeuvres/oeuvre_template.html","Le Seigneur des Anneaux", "J.R.R. Tolkien", "Roman étranger", 4.25, 4, 4, 4, 5];
+var tbodyNoted = document.getElementById("body_noted");
+
+
 function chooseTable(choice) {
     switch (choice) {
         case "tonote":
@@ -25,3 +32,29 @@ function chooseTable(choice) {
 
 choiceToNote.addEventListener("click", function(){chooseTable("tonote");}, false);
 choiceNoted.addEventListener("click", function(){chooseTable("noted");}, false);
+
+function populateTable(body, list, n) {
+    //popule un tableau avec n ligne de valeurs contenues dans une liste
+    //le tableau est normalement populé avec valeurs obtenues via requete à la database
+    for (let i=0; i < n; i++) {
+        let row = document.createElement("tr");
+
+        let titleCell = document.createElement("td");
+        let titleLink = document.createElement("a");
+        titleLink.setAttribute("href", list[0]);
+        titleLink.textContent = list[1];
+        titleCell.appendChild(titleLink);
+        row.appendChild(titleCell);
+
+        for (let j=2; j < list.length; j++) {
+            let cell = document.createElement("td");
+            let data = list[j]; 
+            cell.textContent = data;
+            row.appendChild(cell);
+        }
+    body.appendChild(row);
+    }
+}
+
+window.onload = populateTable(tbodyToNote, listToNote,20);
+window.onload = populateTable(tbodyNoted, listNoted, 15);
