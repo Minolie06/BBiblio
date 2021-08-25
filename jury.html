@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BBiblio</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="menu">
+            <span class="logo"><a href="index.html"><span class="colored">BB</span>iblio</a></span>
+            <ul>
+                <li><a href="oeuvres.html">Oeuvres</a></li>
+                <li><a href="reglement.html">Règlement</a></li>
+                <li><a href="historique.html">Historique</a></li>
+                <li><a href="signup.html">Participez</a></li>
+            </ul>
+            <div class="login">
+                <div class="public hidden">
+                    <a href="/connexion.html">Connexion</a>
+                    <a href="/co1.html">Première connexion ?</a>
+                </div>
+                <div class="session">
+                    <a href="/jury.html">Mon compte</a>
+                    <a href="/index.html">Se déconnecter</a>
+                </div>
+            </div>
+         </nav>
+        <main>
+            <h1>Bienvenue sur votre compte, <span class="colored">Prénom</span></h1>
+            <div class="content jure">
+                <div id="jure_sidebar" class="sidebar">
+                    <div class="choice active" id="choice_to_note">
+                        <span>Oeuvres à noter</span>
+                    </div>
+                    <div class="choice" id="choice_noted">
+                        <span>Oeuvres déjà notées</span>
+                    </div>
+                    <div class="cat_filter">
+                        <span>Catégories</span>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_roman_fr" value="check_roman_fr" checked/>
+                            <label class="check" for="check_roman_fr">Roman français</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_roman_etr" value="check_roman_etr" checked/>
+                            <label class="check" for="check_roman_etr">Roman étranger</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_docu" value="check_docu" checked/>
+                            <label class="check" for="check_docu">Documentaire</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_bio" value="check_bio" checked/>
+                            <label class="check" for="check_bio">Biographie</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table" id="table_to_note">
+                        <h2>Oeuvres à noter</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Titre</td>
+                                    <td>Auteur</td>
+                                    <td>Catégorie</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                </div>
+                <div class="table hidden" id="table_noted">
+                        <h2>Oeuvres déjà notées</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Titre</td>
+                                    <td>Auteur</td>
+                                    <td>Catégorie</td>
+                                    <td>Note : Globale</td>
+                                    <td>Note : Style</td>
+                                    <td>Note : Illustrations</td>
+                                    <td>Note : Mise en page</td>
+                                    <td>Note : Emotion</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+               
+            </div>
+        </main>
+        <script src="scripts/jury.js"></script>
+    </body>
+</html>

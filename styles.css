@@ -314,7 +314,62 @@ form textarea {
 
 /* #endregion */
 
-/* #region AUTEUR */
+/* #region JURE */
+
+.jure {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-areas: 'sidebar to_note '
+                        'sidebar noted';
+    column-gap: 2rem;
+}
+
+#to_note {
+    grid-area: to_note;
+}
+
+#noted {
+    grid-area: noted;
+}
+
+#jure_sidebar {
+    grid-area: sidebar;
+}
+
+/* #endregion */
+
+/* #region SIDEBAR */
+
+.sidebar {
+    background-color: var(--light-grey);
+}
+
+.sidebar>div {
+    padding: .8rem;
+    width: 100%;
+    margin: 0;
+}
+
+.choice:hover {
+   background-color: var(--accent-color-light);
+   cursor: pointer;
+}
+
+.choice.active {
+    background-color: var(--accent-color);
+}
+
+.cat_filter {
+    border-top: 2rem solid white;
+}
+
+.cat_filter .item {
+    margin: .5rem 0 0 1rem;
+}
+
+.table {
+    border: 1px solid black;
+}
 
 
 /* #endregion */
