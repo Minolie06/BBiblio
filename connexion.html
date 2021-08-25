@@ -15,8 +15,14 @@
                 <li><a href="signup.html">Participez</a></li>
             </ul>
             <div class="login">
-                <!-- TO DO: connexion box-->
-                <p><a href="connexion.html">Connexion</a></p>
+                <div class="public">
+                    <a href="/connexion.html">Connexion</a>
+                    <a href="/co1.html">Première connexion ?</a>
+                </div>
+                <div class="session hidden">
+                    <a href="/connexion.html">Mon compte</a>
+                    <a href="/co1.html">Se déconnecter</a>
+                </div>
             </div>
          </nav>
         <main>
@@ -31,10 +37,10 @@
                     </select>
                     <input type="text" id="co_email" placeholder="Adresse email" />
                     <input type="text" id="co_pass" placeholder="Mot de passe" />
-                    <button type="button" id="btn_co" onclick=connexion()>Connexion</button>
+                    <button type="button" id="btn_co">Connexion</button>
                 </form>
             </div>  
         </main>
-        <script src="script.js"></script>
+        <script src="scripts/connexion.js"></script>
     </body>
 </html>
