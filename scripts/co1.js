@@ -10,7 +10,8 @@ function check_password() {
 
     if (/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{10,}$/.test(passFirst.value)) {
         if (passFirst.value == passSecond.value) {
-            //do something
+            //soumission de passFirst à la BDD
+            window.location.href="profil.html";
         }
         else {
             errorDifferent.classList.add("visible");

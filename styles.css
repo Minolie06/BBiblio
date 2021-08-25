@@ -156,16 +156,27 @@ main .content {
 
 
 
-/* FORMULAIRES: PARTICIPEZ + CONNEXION */
+/* FORMULAIRES: PARTICIPEZ + CONNEXION + PROFIL */
 
 form {
     text-align: center;
 }
 
-form label, form select, form input{
+form label:not(.check), form select, form input:not(.check) {
     width: 350px;
     height: 50px;
     margin: 0.5rem calc(50% - 175px);
+}
+
+form fieldset {
+    width: 380px;
+    margin: 0.5rem calc(50% - 190px);
+    border: 1px solid var(--accent-color);
+}
+
+form fieldset .item {
+    text-align: left;
+    margin-left: 30%;
 }
 
 input[type="submit"], button {
@@ -186,23 +197,54 @@ input[type="submit"]:hover, button:hover {
     color: var(--accent-color);
 }
 
-.signup form textarea {
+form textarea {
     width: 350px;
     height: 300px;
     margin: 0.5rem calc(50% - 175px);
     resize: vertical;
 }
 
-/* PREMIERE CONNEXION */
+/* MESSAGES ERREUR */
 
 .error {
     display: none;
-    color: red;
 }
 
 .error.visible {
     display: block;
 }
 
+#btn_profil_yes {
+    color: white;
+    background-color: forestgreen;
+    width: 150px;
+    margin: 0;
+    float:left;
+}
+
+#btn_profil_yes:hover {
+    color: forestgreen;
+    border-color: forestgreen;
+    background-color: white;
+}
+
+#btn_profil_no {
+    color: white;
+    background-color: red;
+    width: 50px;
+    margin: 0 5px;;
+    float: left;
+}
+
+#btn_profil_no:hover {
+    color: red;
+    border-color: red;
+    background-color: white;
+}
+
+.warning {
+    width: 210px;
+    margin: 0 auto;
+}
 
 
