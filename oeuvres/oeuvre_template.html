@@ -43,24 +43,101 @@
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
                     </p>
                 </div>
-                <div class="jury">
+                <div class="jury" id="notes_box_input">
                     <span class="section_title">Notez cette oeuvre</span>
                     <div class="border_left">
                         <div class="notation">
-                            <h3>Critère</h3>
-                            
+                            <div class="note_crit">
+                                <label for="crit1">Style</label>
+                                <select id="crit1">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="note_crit">
+                                <label for="crit2">Illustrations</label>
+                                <select id="crit2">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="note_crit">
+                                <label for="crit3">Mise en page</label>
+                                <select id="crit3">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="note_crit">
+                                <label for="crit4">Emotion</label>
+                                <select id="crit4">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
                         </div>
-                        <button type="button">Valider</button>
+                        <button type="button" id="submit_notes">Valider</button>
                     </div>
                 </div>
-                <div class="jury_recap">
-                    <span class="section_title">Récapitulatif des notes</span>
-                    <div class="border_left">
-                        
+                <div class="jury hidden" id="notes_box_recap">
+                    <span class="section_title">Récapitulatif de vos notes</span>
+                    <div class="border_left notation">
+                        <div class="note_crit">
+                            <span>Style</span>
+                            <span class="note"></span>
+                        </div>
+                        <div class="note_crit">
+                            <span>Illustrations</span>
+                            <span class="note"></span>
+                        </div>
+                        <div class="note_crit">
+                            <span>Mise en page</span>
+                            <span class="note"></span>
+                        </div>
+                        <div class="note_crit">
+                            <span>Emotion</span>
+                            <span class="note"></span>
+                        </div>
+                        <div class="note_crit global">
+                            <span>Note globale</span>
+                            <span class="note"></span>
+                        </div>
                     </div>
                 </div>
             </div>          
         </main>
-        <script src="../script.js"></script>
+        <script src="../scripts/oeuvre.js"></script>
     </body>
 </html>
