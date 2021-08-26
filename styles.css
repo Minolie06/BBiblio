@@ -14,6 +14,10 @@
     --light-grey: #dbdbdb;
 }
 
+body {
+    position: relative;
+}
+
 .colored {
     color: var(--accent-color);
 }
@@ -135,7 +139,52 @@ main {
 main .content {
     width: 75%;
     margin: 0 auto;
+}
 
+/* #endregion */
+
+/* #region FOOTER */
+
+footer {
+    height: 2rem;
+    padding: 0 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--medium-dark-grey);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+footer a {
+    color: white;
+}
+
+#social_icons {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#social_icons a {
+    display: flex;
+    align-items: center;;
+}
+
+footer svg {
+    height: 1.5rem;
+    fill:white;
+}
+
+footer svg:hover {
+    fill: var(--accent-color);
+}
+
+footer a:hover {
+    color: var(--accent-color);
 }
 
 /* #endregion */
@@ -308,8 +357,6 @@ form textarea {
 
 /* #region MESSAGES ERREUR */
 
-
-
 #btn_profil_yes {
     color: white;
     background-color: forestgreen;
@@ -457,3 +504,4 @@ form textarea {
 }
 
 /* #endregion */
+
