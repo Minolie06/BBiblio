@@ -24,3 +24,13 @@ function submitNotes() {
 }
 
 btnSubmitNotes.addEventListener("click", submitNotes, false);
+
+document.getElementById("valid_yes").addEventListener("click", function() {
+    //ecriture database : valide la fiche de l'oeuvre (status validé) et rend la page public
+    alert("Fiche oeuvre validée");
+});
+
+document.getElementById("valid_no").addEventListener("click", function() {
+    //ecriture database : supprime l'entrée et la page associée
+    alert("Fiche oeuvre rejetée");
+});

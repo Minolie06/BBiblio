@@ -3,20 +3,25 @@ var choiceList = document.getElementsByClassName("choice");
 var filterList = document.getElementsByClassName("filter");
 var tableList = document.getElementsByClassName("table");
 var bodyList = document.getElementsByClassName("body_tofill");
+var numberList = document.getElementsByClassName("table_n");
 
 var listAccTovalid = [
-    "oeuvres/oeuvre_template.html",
+    "mailto:john.doe@email.fr",
+    "john.doe@email.fr",
     "John", 
     "Doe",
     "Auteur", 
-    "01/01/2021"
+    "01/01/2021",
+    '<button type="button" class="acc_detail">+</button>'
 ];
 var listAccValid = [
-    "oeuvres/oeuvre_template.html", 
+    "mailto:john.doe@email.fr",
+    "john.doe@email.fr",
     "John", 
     "Doe",
     "Auteur",
-    "26/08/2021"
+    "26/08/2021",
+    '<button type="button" class="acc_detail">+</button>'
 ];
 var listBookTovalid = [
     "oeuvres/oeuvre_template.html",
@@ -42,7 +47,7 @@ function chooseTable(choice) {
         if (i == choice) {
             tableList[i].classList.remove("hidden");
             choiceList[i].classList.add("active");
-            populateTable(bodyList[i], listData[i], 20);
+            numberList[i].textContent = populateTable(bodyList[i], listData[i], 20) + " ";
         } else {
             tableList[i].classList.add("hidden");
             choiceList[i].classList.remove("active");
@@ -69,25 +74,28 @@ function populateTable(body, list, n) {
         for (let j=2; j < list.length; j++) {
             let cell = document.createElement("td");
             let data = list[j]; 
-            cell.textContent = data;
+            cell.innerHTML = data;
             row.appendChild(cell);
         }
     body.appendChild(row);
     }
+    return n
 }
 
 //EVENTS
+
+window.onload = document.getElementById("name").textContent = "Prénom";
+//valeur normalement obtenue via requete à la database
 
 choiceList[0].addEventListener("click", function(){chooseTable(0);}, false);
 choiceList[1].addEventListener("click", function(){chooseTable(1);}, false);
 choiceList[2].addEventListener("click", function(){chooseTable(2);}, false);
 choiceList[3].addEventListener("click", function(){chooseTable(3);}, false);
 
-window.onload = populateTable(bodyList[0], listData[0], 20);
+window.onload = numberList[0].textContent = populateTable(bodyList[0], listData[0], 20) + " ";
 // le tableau "actif" est normalement repopulé via requete à la database à chaque event :
 // - click sur div de classe "choice" (fonction chooseTable)
 // - changement de l'attribut "checked" des checkboxs contenues dans la div de classe _filter
 // - click sur les éléments td contenus dans les theads du tableau (fonctionnalité de tri)
 
-window.onload = document.getElementById("name").textContent = "Prénom";
-//valeur normalement obtenue via requete à la database
+

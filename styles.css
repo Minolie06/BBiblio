@@ -134,6 +134,7 @@ h2 {
 
 main {
     margin-top: 5.5rem;
+    margin-bottom: 3rem;
 }
 
 main .content {
@@ -185,6 +186,22 @@ footer svg:hover {
 
 footer a:hover {
     color: var(--accent-color);
+}
+
+/* #endregion */
+
+/* #region INDEX */
+
+#index_wrap {
+    display : grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;;
+}
+
+#index_wrap>div {
+    background-color: var(--accent-color-light);
+    min-height: 65vh;
+    padding: 0 1rem;
 }
 
 /* #endregion */
@@ -246,13 +263,6 @@ footer a:hover {
     margin-top: 2rem;
 }
 
-.section_title {
-    color: var(--accent-color);
-    font-size: 1.15rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 .border_left {
     text-align: justify;
     padding: 0 2rem;
@@ -266,7 +276,7 @@ footer a:hover {
 }
 /* #endregion */
 
-/* #region OEUVRE -> NOTATION */
+/* #region OEUVRE -> NOTATION + VALIDATION*/
 
 .note_crit {
     width: 23%;
@@ -301,6 +311,15 @@ footer a:hover {
 .note_crit.global {
     margin: auto;
     width: 30%;
+}
+
+.validation button {
+    margin: 0 1rem;
+}
+
+.validation {
+    display: flex;
+    justify-content: center;
 }
 
 /* #endregion */
@@ -386,8 +405,15 @@ form textarea {
 }
 
 .warning {
+    display: block;
     width: 210px;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
+}
+
+.warning:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 /* #endregion */
@@ -501,6 +527,12 @@ form textarea {
 
 .table a {
     color: black;
+}
+
+.table button {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 calc(50% - 1rem);
 }
 
 /* #endregion */

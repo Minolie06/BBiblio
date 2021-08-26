@@ -8,10 +8,10 @@ function show_warning() {
     for (let i = 0; i < fieldList.length; i++) {
         fieldList[i].setAttribute("disabled", "disabled");
     }
-    btnProfil.classList.add("error");
-    btnYes.classList.add("visible");
-    btnNo.classList.add("visible");
-    warningProfil.classList.add("visible");
+    btnProfil.classList.add("hidden");
+    btnYes.classList.remove("hidden");
+    btnNo.classList.remove("hidden");
+    warningProfil.classList.remove("hidden");
 }
 
 function warning(answer) {
@@ -23,10 +23,10 @@ function warning(answer) {
             fieldList[i].removeAttribute("disabled");
         }
     }
-    btnProfil.classList.remove("error");
-    btnYes.classList.remove("visible");
-    btnNo.classList.remove("visible");
-    warningProfil.classList.remove("visible");
+    btnProfil.classList.remove("hidden");
+    btnYes.classList.add("hidden");
+    btnNo.classList.add("hidden");
+    warningProfil.classList.add("hidden");
 }
 
 btnProfil.addEventListener("click", show_warning, false);

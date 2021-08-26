@@ -29,12 +29,12 @@
             <div class="content profil">
                 <h1>Bienvenue sur votre compte</h1>
                 <form>
-                <fieldset>
-                    <legend>Veuillez complétez votre profil : </legend>
-                    <input type="text" id="lname" placeholder="Nom" />
-                    <input type="text" id="fname" placeholder="Prénom" />
-                    <textarea id="profil_descr" placeholder="Parlez un peu de vous."></textarea>
-                </fieldset>
+                    <fieldset>
+                        <legend>Veuillez complétez votre profil : </legend>
+                        <input type="text" id="lname" placeholder="Nom" />
+                        <input type="text" id="fname" placeholder="Prénom" />
+                        <textarea id="profil_descr" placeholder="Parlez un peu de vous."></textarea>
+                    </fieldset>
                     <fieldset class="jury">
                         <legend>Veuillez choisir la ou les catégorie(s) pour lequelle(s) vous souhaitez être juré : </legend>
                         <div class="item">
@@ -54,14 +54,20 @@
                             <label class="check" for="check_bio">Biographie</label>
                         </div>
                     </fieldset>
+                    <input class="check" type="checkbox" id="check_regl" value="check_regl"/>
+                    <label class="check" for="check_regl">
+                        J'ai lu et j'accepte le 
+                        <a href="reglement.html">règlement du concours</a>
+                        et les conditions d'utilisations du site.
+                    </label>
                     <button type="button" id="btn_profil">Valider</button>
-                    <p id="warning_profil" class="error">
-                            Attention : vous ne pourrez plus modifier votre profil une fois validé.
-                            Êtes-vous sûr(e) de bien vouloir continuer ?
-                    </p>
+                    <p id="warning_profil" class="hidden">
+                        Attention : vous ne pourrez plus modifier votre profil une fois validé.
+                        Êtes-vous sûr(e) de bien vouloir continuer ?
+                    </p>    
                     <div class="warning">
-                        <button type="button" id="btn_profil_yes" class="error">Oui</button>
-                        <button type="button" id="btn_profil_no" class="error">Non</button>
+                        <button type="button" id="btn_profil_yes" class="hidden">Oui</button>
+                        <button type="button" id="btn_profil_no" class="hidden">Non</button>
                     </div>
                 </form>
                 
