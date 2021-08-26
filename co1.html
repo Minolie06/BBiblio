@@ -28,17 +28,24 @@
         <main>
             <div class="content login">
                 <h1>Première connexion ?</h1>
-                <form>
+                <form id="form_temp">
                     <input type="text" id="email" placeholder="Adresse mail" />
+                    <input type="password" id="pass" placeholder="Mot de passe temporaire" />
+                    <button type="button" id="btn_passtemp">Valider</button>
+                    <p id="error_invalid_temp" class="hidden">
+                        Identifiant et/ou mot de passe incorrect.
+                    </p>
+                </form>
+                <form id="form_new" class="hidden">
                     <label for="account_type">Veuillez choisir un nouveau mot de passe: </label>
                     <input type="password" id="pass_first" placeholder="Choisissez votre mot de passe" />
                     <input type="password" id="pass_second" placeholder="Confirmez votre mot de passe" />
                     <button type="button" id="btn_newpass">Valider</button>
-                    <p id="error_invalid" class="error">
+                    <p id="error_invalid" class="hidden">
                         Votre nouveau mot de passe doit comprendre 10 caractères minimum,
                         dont au moins une majuscule et un chiffre.
                     </p>
-                    <p id="error_different" class="error">
+                    <p id="error_different" class="hidden">
                         Les deux entrées de mot de passe sont différentes.
                         Veuillez confirmez votre mot de passe à nouveau.
                     </p>
