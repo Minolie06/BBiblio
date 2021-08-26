@@ -37,11 +37,11 @@
                         <option value="docu">Documentaire</option>
                         <option value="bio">Biographie</option>
                     </select>
-                    <textarea id="synopsis" value="synopsis" placeholder="Synopsis de l'oeuvre" required></textarea>
+                    <textarea id="synopsis" placeholder="Synopsis de l'oeuvre" required></textarea>
                     <label for="cover">Téléverser la couverture : </label>
-                    <input type="file" value="cover" accept="images/*" />
+                    <input id="cover" type="file" accept="images/*" />
                     <label for="pdf">Téléverser le PDF de l'oeuvre : </label>
-                    <input type="file" value="pdf" accept=".pdf" />
+                    <input id="pdf" type="file" accept=".pdf" />
                     <button type="submit">Valider</button>
                 </form>
             </div>
