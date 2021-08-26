@@ -26,7 +26,7 @@
             </div>
          </nav>
         <main>
-            <h1>Bienvenue sur votre compte, <span class="colored">Prénom</span></h1>
+            <h1>Bienvenue sur votre compte Juré, <span id="name" class="colored"></span></h1>
             <div class="content jure">
                 <div id="jure_sidebar" class="sidebar">
                     <div class="choice active" id="choice_to_note">
@@ -35,7 +35,7 @@
                     <div class="choice" id="choice_noted">
                         <span>Oeuvres déjà notées</span>
                     </div>
-                    <div class="cat_filter">
+                    <div class="filter">
                         <span>Catégories</span>
                         <div class="item">
                             <input class="check" type="checkbox" id="check_roman_fr" value="check_roman_fr" checked/>
@@ -56,40 +56,39 @@
                     </div>
                 </div>
                 <div class="table" id="table_to_note">
-                        <h2>Oeuvres à noter</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Titre</td>
-                                    <td>Auteur</td>
-                                    <td>Catégorie</td>
-                                </tr>
-                            </thead>
-                            <tbody id="body_to_note">
+                    <h2>Oeuvres à noter</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Titre</td>
+                                <td>Auteur</td>
+                                <td>Catégorie</td>
+                            </tr>
+                        </thead>
+                        <tbody id="body_to_note">
 
-                            </tbody>
-                        </table>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="table hidden" id="table_noted">
-                        <h2>Oeuvres déjà notées</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Titre</td>
-                                    <td>Auteur</td>
-                                    <td>Catégorie</td>
-                                    <td>Note globale</td>
-                                    <td>Style</td>
-                                    <td>Illustrations</td>
-                                    <td>Mise en page</td>
-                                    <td>Emotion</td>
-                                </tr>
-                            </thead>
-                            <tbody id="body_noted">
+                    <h2>Oeuvres déjà notées</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Titre</td>
+                                <td>Auteur</td>
+                                <td>Catégorie</td>
+                                <td>Note globale</td>
+                                <td>Style</td>
+                                <td>Illustrations</td>
+                                <td>Mise en page</td>
+                                <td>Emotion</td>
+                            </tr>
+                        </thead>
+                        <tbody id="body_noted">
 
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
                
             </div>

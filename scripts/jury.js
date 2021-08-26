@@ -1,3 +1,4 @@
+// VARIABLES
 var choiceToNote = document.getElementById("choice_to_note");
 var choiceNoted = document.getElementById("choice_noted");
 
@@ -10,7 +11,7 @@ var tbodyToNote = document.getElementById("body_to_note");
 var listNoted = ["oeuvres/oeuvre_template.html","Le Seigneur des Anneaux", "J.R.R. Tolkien", "Roman étranger", 4.25, 4, 4, 4, 5];
 var tbodyNoted = document.getElementById("body_noted");
 
-
+// FONCTIONS
 function chooseTable(choice) {
     switch (choice) {
         case "tonote":
@@ -19,6 +20,9 @@ function chooseTable(choice) {
 
             tableNoted.classList.add("hidden");
             choiceNoted.classList.remove("active");
+            
+            tbodyToNote.textContent = "";
+            populateTable(tbodyToNote, listToNote,20);
             break;
         case "noted":
             tableToNote.classList.add("hidden");
@@ -26,12 +30,12 @@ function chooseTable(choice) {
 
             tableNoted.classList.remove("hidden");
             choiceNoted.classList.add("active");
+
+            tbodyNoted.textContent = "";
+            populateTable(tbodyNoted, listNoted, 15);
             break;
     }
 }
-
-choiceToNote.addEventListener("click", function(){chooseTable("tonote");}, false);
-choiceNoted.addEventListener("click", function(){chooseTable("noted");}, false);
 
 function populateTable(body, list, n) {
     //popule un tableau avec n ligne de valeurs contenues dans une liste
@@ -56,5 +60,17 @@ function populateTable(body, list, n) {
     }
 }
 
+//EVENTS
+
+choiceToNote.addEventListener("click", function(){chooseTable("tonote");}, false);
+choiceNoted.addEventListener("click", function(){chooseTable("noted");}, false);
+
+
 window.onload = populateTable(tbodyToNote, listToNote,20);
-window.onload = populateTable(tbodyNoted, listNoted, 15);
+// le tableau "actif" est normalement repopulé via requete à la database à chaque event :
+// - click sur div de classe "choice" (fonction chooseTable)
+// - changement de l'attribut "checked" des checkboxs contenues dans la div de classe cat_filter
+// - click sur les éléments td contenus dans les theads du tableau (fonctionnalité de tri)
+
+window.onload = document.getElementById("name").textContent = "Prénom";
+//valeur normalement obtenue via requete à la database
