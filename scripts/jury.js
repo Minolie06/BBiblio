@@ -70,7 +70,7 @@ choiceNoted.addEventListener("click", function(){chooseTable("noted");}, false);
 
 
 window.onload = numberList[0].textContent = populateTable(tbodyToNote, listToNote, 20) + " ";
-// le tableau "actif" est normalement repopulé via requete à la database à chaque event :
+// le tableau "actif" est normalement repeuplé via requete à la database à chaque event :
 // - click sur div de classe "choice" (fonction chooseTable)
 // - changement de l'attribut "checked" des checkboxs contenues dans la div de classe cat_filter
 // - click sur les éléments td contenus dans les theads du tableau (fonctionnalité de tri)

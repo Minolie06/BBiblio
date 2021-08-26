@@ -537,3 +537,15 @@ form textarea {
 
 /* #endregion */
 
+/* #region DISPLAY BOX */
+
+#display_box {
+    position: fixed;
+    border: 1px solid black;
+    top: 20%;
+    right: 5%;
+    width: 15em;
+    padding: 1rem;
+}
+
+/* #endregion */

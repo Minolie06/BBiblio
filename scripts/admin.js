@@ -48,6 +48,9 @@ function chooseTable(choice) {
             tableList[i].classList.remove("hidden");
             choiceList[i].classList.add("active");
             numberList[i].textContent = populateTable(bodyList[i], listData[i], 20) + " ";
+            if (i<2) {
+                createBtnListener();
+            }
         } else {
             tableList[i].classList.add("hidden");
             choiceList[i].classList.remove("active");
@@ -77,9 +80,23 @@ function populateTable(body, list, n) {
             cell.innerHTML = data;
             row.appendChild(cell);
         }
-    body.appendChild(row);
+        body.appendChild(row);
     }
     return n
+}
+
+function createBtnListener() {
+    let btnDetailList =  Array.from(document.getElementsByClassName("acc_detail"));
+
+    btnDetailList.forEach(btn => btn.addEventListener("click", function() {
+        alert("Affichage en overlay d'une fenêtre contenant les informations du compte et des boutons valider/rejeter un compte");
+        //normalement, le bouton affiche une fenêtre en overlay contenant
+        //les détails de la candidature/profil du compte obtenu via requete database
+        //notamment des boutons valider/rejeter la candidature pour les comptes à valider
+        //le bouton valider écrit le status "validé" dans la database
+        //le bouton rejeter supprime l'entrée dans la database
+        //les deux boutons lance chooseTable(0)
+    }, false));
 }
 
 //EVENTS
@@ -92,10 +109,9 @@ choiceList[1].addEventListener("click", function(){chooseTable(1);}, false);
 choiceList[2].addEventListener("click", function(){chooseTable(2);}, false);
 choiceList[3].addEventListener("click", function(){chooseTable(3);}, false);
 
-window.onload = numberList[0].textContent = populateTable(bodyList[0], listData[0], 20) + " ";
+window.onload = chooseTable(0);
 // le tableau "actif" est normalement repopulé via requete à la database à chaque event :
 // - click sur div de classe "choice" (fonction chooseTable)
 // - changement de l'attribut "checked" des checkboxs contenues dans la div de classe _filter
 // - click sur les éléments td contenus dans les theads du tableau (fonctionnalité de tri)
-
 
