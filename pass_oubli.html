@@ -28,20 +28,20 @@
             </div>
          </nav>
         <main>
-            <div class="content login">
-                <h1>Connectez-vous</h1>
-                <form>
-                    <label for="account_type">En tant que : </label>
-                    <select id="account_type">
-                        <option value="author">Auteur/Editeur</option>
-                        <option value="jury">Membre du jury</option>
-                        <option value="admin">Administrateur</option>
-                    </select>
-                    <input type="text" id="co_email" placeholder="Adresse email" />
-                    <input type="text" id="co_pass" placeholder="Mot de passe" />
-                    <button type="button" id="btn_co">Connexion</button>
+            <div class="content oubli">
+                <h1>Mot de passe oublié ?</h1>
+                <form id="form_oubli">
+                    <label for="oubli_email">Entrez votre adresse mail : </label>
+                    <input type="text" id="oubli_email" placeholder="Adresse email" />
+                    <button type="button" id="btn_oubli">Envoyez</button>
                 </form>
-                <a href="pass_oubli.html">Mot de passe oublié ?</a>
+                <div id="message_oubli" class="hidden">
+                    <p >
+                        Merci ! Un lien pour rénitialiser votre mot de passe vous sera envoyé par email.
+                    </p>
+                    <a href="index.html">Retour à l'accueil</a>
+                </div>
+                
             </div>  
         </main>
         <footer>
@@ -61,6 +61,6 @@
                 <span>Nous contacter : <a href="mailto:contact@bbiblio.com">contact@bbiblio.com</a></span>
             </div>
         </footer>
-        <script src="scripts/connexion.js"></script>
+        <script src="scripts/pass_oubli.js"></script>
     </body>
 </html>

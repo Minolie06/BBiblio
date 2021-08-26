@@ -372,6 +372,18 @@ form textarea {
     resize: vertical;
 }
 
+.login, .oubli {
+    text-align: center;
+}
+
+.login a, .oubli a {
+    color: var(--dark-grey);
+}
+
+.login a:hover, .oubli a:hover {
+    color: var(--accent-color);
+}
+
 /* #endregion */
 
 /* #region MESSAGES ERREUR */
