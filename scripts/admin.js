@@ -89,8 +89,8 @@ function createBtnListener() {
     let btnDetailList =  Array.from(document.getElementsByClassName("acc_detail"));
 
     btnDetailList.forEach(btn => btn.addEventListener("click", function() {
-        alert("Affichage en overlay d'une fenêtre contenant les informations du compte et des boutons valider/rejeter un compte");
-        //normalement, le bouton affiche une fenêtre en overlay contenant
+        alert("Affichage d'une ligne supplémentaire les informations du compte et des boutons valider/rejeter un compte");
+        //normalement, le bouton affiche une ligne supplémentaire contenant
         //les détails de la candidature/profil du compte obtenu via requete database
         //notamment des boutons valider/rejeter la candidature pour les comptes à valider
         //le bouton valider écrit le status "validé" dans la database
