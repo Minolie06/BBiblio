@@ -22,58 +22,127 @@
                     <a href="co1.html">Première connexion ?</a>
                 </div>
                 <div class="session">
-                    <a href="connexion.html">Mon compte</a>
-                    <a href="co1.html">Se déconnecter</a>
+                    <a href="/admin.html">Mon compte</a>
+                    <a href="/index.html">Se déconnecter</a>
                 </div>
             </div>
          </nav>
         <main>
-            <div class="content profil">
-                <h1>Bienvenue sur votre compte</h1>
-                <form>
-                    <fieldset>
-                        <legend>Veuillez complétez votre profil : </legend>
-                        <input type="text" id="lname" placeholder="Nom" />
-                        <input type="text" id="fname" placeholder="Prénom" />
-                        <textarea id="profil_descr" placeholder="Parlez un peu de vous."></textarea>
-                    </fieldset>
-                    <fieldset class="jury">
-                        <legend>Veuillez choisir la ou les catégorie(s) pour lequelle(s) vous souhaitez être juré : </legend>
+            <h1>Bienvenue sur votre compte Admin, <span id="name" class="colored">Prénom</span></h1>
+            <div class="content admin">
+                <div id="admin_sidebar" class="sidebar">
+                    <div class="choice active" id="choice_acc_tovalidate">
+                        <span>Comptes à valider</span>
+                    </div>
+                    <div class="choice" id="choice_acc_jury">
+                        <span>Comptes déjà validés</span>
+                    </div>
+                    <div class="choice" id="choice_book_tovalidate">
+                        <span>Oeuvres à valider</span>
+                    </div>
+                    <div class="choice" id="choice_book_validated">
+                        <span>Oeuvres déjà validées</span>
+                    </div>
+                    <div class="filter">
+                        <span>Types de comptes</span>
                         <div class="item">
-                            <input class="check" type="checkbox" id="check_roman_fr" value="check_roman_fr"/>
+                            <input class="check" type="checkbox" id="check_auteur" value="check_auteur" checked/>
+                            <label class="check" for="check_auteur">Auteur / Editeur</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_jure" value="check_jure" checked/>
+                            <label class="check" for="check_jure">Juré</label>
+                        </div>
+                    </div>
+                    <div class="filter hidden">
+                        <span>Catégories</span>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_roman_fr" value="check_roman_fr" checked/>
                             <label class="check" for="check_roman_fr">Roman français</label>
                         </div>
                         <div class="item">
-                            <input class="check" type="checkbox" id="check_roman_etr" value="check_roman_etr"/>
+                            <input class="check" type="checkbox" id="check_roman_etr" value="check_roman_etr" checked/>
                             <label class="check" for="check_roman_etr">Roman étranger</label>
                         </div>
                         <div class="item">
-                            <input class="check" type="checkbox" id="check_docu" value="check_docu"/>
+                            <input class="check" type="checkbox" id="check_docu" value="check_docu" checked/>
                             <label class="check" for="check_docu">Documentaire</label>
                         </div>
                         <div class="item">
-                            <input class="check" type="checkbox" id="check_bio" value="check_bio"/>
+                            <input class="check" type="checkbox" id="check_bio" value="check_bio" checked/>
                             <label class="check" for="check_bio">Biographie</label>
                         </div>
-                    </fieldset>
-                    <input class="check" type="checkbox" id="check_regl" value="check_regl"/>
-                    <label class="check" for="check_regl">
-                        J'ai lu et j'accepte le 
-                        <a href="reglement.html">règlement du concours</a>
-                        et les conditions d'utilisations du site.
-                    </label>
-                    <button type="button" id="btn_profil">Valider</button>
-                    <p id="warning_profil" class="hidden">
-                        Attention : vous ne pourrez plus modifier votre profil une fois validé.
-                        Êtes-vous sûr(e) de bien vouloir continuer ?
-                    </p>    
-                    <div class="warning">
-                        <button type="button" id="btn_profil_yes" class="hidden">Oui</button>
-                        <button type="button" id="btn_profil_no" class="hidden">Non</button>
                     </div>
-                </form>
-                
-            </div>  
+                </div>
+                <div class="table" id="table_acc_tovalidate">
+                    <h2><span class="table_n"></span>Comptes à valider</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Adresse mail</td>
+                                <td>Nom</td>
+                                <td>Prénom</td>
+                                <td>Type de compte</td>
+                                <td>Date de candidature</td>
+                                <td>Voir les détails</td>
+                            </tr>
+                        </thead>
+                        <tbody class="body_tofill" id="body_acc_tovalidate">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table hidden" id="table_acc_validated">
+                    <h2><span class="table_n"></span>Comptes déjà validés</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Adresse mail</td>
+                                <td>Nom</td>
+                                <td>Prénom</td>
+                                <td>Type de compte</td>
+                                <td>Date de création</td>
+                                <td>Voir les détails</td>
+                            </tr>
+                        </thead>
+                        <tbody class="body_tofill" id="body_acc_validated">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table hidden" id="table_book_tovalidate">
+                    <h2><span class="table_n"></span>Oeuvres à valider</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Titre</td>
+                                <td>Auteur</td>
+                                <td>Catégorie</td>
+                                <td>Date de soumission de l'oeuvre</td>
+                            </tr>
+                        </thead>
+                        <tbody class="body_tofill" id="body_book_tovalidate">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table hidden" id="table_book_validated">
+                    <h2><span class="table_n"></span>Oeuvres déjà validées</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Titre</td>
+                                <td>Auteur</td>
+                                <td>Catégorie</td>
+                                <td>Date de validation de l'oeuvre</td>
+                            </tr>
+                        </thead>
+                        <tbody class="body_tofill" id="body_book_validated">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </main>
         <footer>
             <div id="copyright">
@@ -92,6 +161,6 @@
                 <span>Nous contacter : <a href="mailto:contact@bbiblio.com">contact@bbiblio.com</a></span>
             </div>
         </footer>
-        <script src="scripts/profil.js"></script>
+        <script src="scripts/admin.js"></script>
     </body>
 </html>

@@ -17,43 +17,83 @@
                 <li><a href="signup.html">Participez</a></li>
             </ul>
             <div class="login">
-                <div class="public">
+                <div class="public hidden">
                     <a href="connexion.html">Connexion</a>
                     <a href="co1.html">Première connexion ?</a>
                 </div>
-                <div class="session hidden">
-                    <a href="connexion.html">Mon compte</a>
-                    <a href="co1.html">Se déconnecter</a>
+                <div class="session">
+                    <a href="/jury.html">Mon compte</a>
+                    <a href="/index.html">Se déconnecter</a>
                 </div>
             </div>
          </nav>
         <main>
-            <div class="content login">
-                <h1>Première connexion ?</h1>
-                <form id="form_temp">
-                    <input type="text" id="email" placeholder="Adresse mail" />
-                    <input type="password" id="pass" placeholder="Mot de passe temporaire" />
-                    <button type="button" id="btn_passtemp">Valider</button>
-                    <p id="error_invalid_temp" class="hidden">
-                        Identifiant et/ou mot de passe incorrect.
-                    </p>
-                </form>
-                <form id="form_new" class="hidden">
-                    <label for="pass_first">Veuillez choisir un nouveau mot de passe: </label>
-                    <input type="password" id="pass_first" placeholder="Choisissez votre mot de passe" />
-                    <input type="password" id="pass_second" placeholder="Confirmez votre mot de passe" />
-                    <button type="button" id="btn_newpass">Valider</button>
-                    <p id="error_invalid" class="hidden">
-                        Votre nouveau mot de passe doit comprendre 10 caractères minimum,
-                        dont au moins une majuscule et un chiffre.
-                    </p>
-                    <p id="error_different" class="hidden">
-                        Les deux entrées de mot de passe sont différentes.
-                        Veuillez confirmez votre mot de passe à nouveau.
-                    </p>
-                </form>
-                
-            </div>  
+            <h1>Bienvenue sur votre compte Juré, <span id="name" class="colored"></span></h1>
+            <div class="content jure">
+                <div id="jure_sidebar" class="sidebar">
+                    <div class="choice active" id="choice_to_note">
+                        <span>Oeuvres à noter</span>
+                    </div>
+                    <div class="choice" id="choice_noted">
+                        <span>Oeuvres déjà notées</span>
+                    </div>
+                    <div class="filter">
+                        <span>Catégories</span>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_roman_fr" value="check_roman_fr" checked/>
+                            <label class="check" for="check_roman_fr">Roman français</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_roman_etr" value="check_roman_etr" checked/>
+                            <label class="check" for="check_roman_etr">Roman étranger</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_docu" value="check_docu" checked/>
+                            <label class="check" for="check_docu">Documentaire</label>
+                        </div>
+                        <div class="item">
+                            <input class="check" type="checkbox" id="check_bio" value="check_bio" checked/>
+                            <label class="check" for="check_bio">Biographie</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table" id="table_to_note">
+                    <h2><span class="table_n"></span>Oeuvres à noter</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Titre</td>
+                                <td>Auteur</td>
+                                <td>Catégorie</td>
+                            </tr>
+                        </thead>
+                        <tbody id="body_to_note">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table hidden" id="table_noted">
+                    <h2><span class="table_n"></span>Oeuvres déjà notées</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Titre</td>
+                                <td>Auteur</td>
+                                <td>Catégorie</td>
+                                <td>Note globale</td>
+                                <td>Style</td>
+                                <td>Illustrations</td>
+                                <td>Mise en page</td>
+                                <td>Emotion</td>
+                            </tr>
+                        </thead>
+                        <tbody id="body_noted">
+
+                        </tbody>
+                    </table>
+                </div>
+               
+            </div>
         </main>
         <footer>
             <div id="copyright">
@@ -72,6 +112,6 @@
                 <span>Nous contacter : <a href="mailto:contact@bbiblio.com">contact@bbiblio.com</a></span>
             </div>
         </footer>
-        <script src="scripts/co1.js"></script>
+        <script src="scripts/jury.js"></script>
     </body>
 </html>

@@ -17,43 +17,36 @@
                 <li><a href="signup.html">Participez</a></li>
             </ul>
             <div class="login">
-                <div class="public">
+                <div class="public hidden">
                     <a href="connexion.html">Connexion</a>
                     <a href="co1.html">Première connexion ?</a>
                 </div>
-                <div class="session hidden">
-                    <a href="connexion.html">Mon compte</a>
-                    <a href="co1.html">Se déconnecter</a>
+                <div class="session">
+                    <a href="/auteur.html">Mon compte</a>
+                    <a href="/index.html">Se déconnecter</a>
                 </div>
             </div>
          </nav>
         <main>
-            <div class="content login">
-                <h1>Première connexion ?</h1>
-                <form id="form_temp">
-                    <input type="text" id="email" placeholder="Adresse mail" />
-                    <input type="password" id="pass" placeholder="Mot de passe temporaire" />
-                    <button type="button" id="btn_passtemp">Valider</button>
-                    <p id="error_invalid_temp" class="hidden">
-                        Identifiant et/ou mot de passe incorrect.
-                    </p>
+            <div class="content auteur">
+                <h1>Ajouter une oeuvre</h1>
+                <form action="index.html" method="get" id="ajout_oeuvre">
+                    <input type="text" name="title" placeholder="Titre de l'oeuvre" required/>
+                    <select id="category" required>
+                        <option value="" disabled selected hidden>Sélectioner la catégorie</option>
+                        <option value="roman_fr">Roman français</option>
+                        <option value="roman_etr">Roman étranger</option>
+                        <option value="docu">Documentaire</option>
+                        <option value="bio">Biographie</option>
+                    </select>
+                    <textarea id="synopsis" placeholder="Synopsis de l'oeuvre" required></textarea>
+                    <label for="cover">Téléverser la couverture : </label>
+                    <input id="cover" type="file" accept="images/*" />
+                    <label for="pdf">Téléverser le PDF de l'oeuvre : </label>
+                    <input id="pdf" type="file" accept=".pdf" />
+                    <button type="submit">Valider</button>
                 </form>
-                <form id="form_new" class="hidden">
-                    <label for="pass_first">Veuillez choisir un nouveau mot de passe: </label>
-                    <input type="password" id="pass_first" placeholder="Choisissez votre mot de passe" />
-                    <input type="password" id="pass_second" placeholder="Confirmez votre mot de passe" />
-                    <button type="button" id="btn_newpass">Valider</button>
-                    <p id="error_invalid" class="hidden">
-                        Votre nouveau mot de passe doit comprendre 10 caractères minimum,
-                        dont au moins une majuscule et un chiffre.
-                    </p>
-                    <p id="error_different" class="hidden">
-                        Les deux entrées de mot de passe sont différentes.
-                        Veuillez confirmez votre mot de passe à nouveau.
-                    </p>
-                </form>
-                
-            </div>  
+            </div>
         </main>
         <footer>
             <div id="copyright">
@@ -72,6 +65,6 @@
                 <span>Nous contacter : <a href="mailto:contact@bbiblio.com">contact@bbiblio.com</a></span>
             </div>
         </footer>
-        <script src="scripts/co1.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
