@@ -11,7 +11,7 @@
         <nav class="menu">
             <span class="logo"><a href="index.html"><span class="colored">BB</span>iblio</a></span>
             <ul>
-                <li class="active"><a href="oeuvres.html">Oeuvres</a></li>
+                <li><a href="oeuvres.html">Oeuvres</a></li>
                 <li><a href="reglement.html">Règlement</a></li>
                 <li><a href="historique.html">Historique</a></li>
                 <li><a href="signup.html">Participez</a></li>
@@ -26,79 +26,23 @@
                     <a href="/co1.html">Se déconnecter</a>
                 </div>
             </div>
-        </nav>
+         </nav>
         <main>
-            <div class="content oeuvres">
-                <h1>Les candidats de l'édition 2021 du concours</h1>
-                <div class="filter">
-                    <select id="categories">
-                        <option value="all_cat">Toutes les catégories</option>
-                        <option value="roman_fr">Roman français</option>
-                        <option value="roman_etr">Roman étranger</option>
-                        <option value="docu">Documentaire</option>
-                        <option value="bio">Biographie</option>
-                    </select>
-                    <input type="text" id="search" placeholder="Rechercher une oeuvre" />
+            <div class="content oubli">
+                <h1>Mot de passe oublié ?</h1>
+                <form id="form_oubli">
+                    <label for="oubli_email">Entrez votre adresse mail : </label>
+                    <input type="text" id="oubli_email" placeholder="Adresse email" />
+                    <button type="button" id="btn_oubli">Envoyez</button>
+                </form>
+                <div id="message_oubli" class="hidden">
+                    <p >
+                        Merci ! Un lien pour rénitialiser votre mot de passe vous sera envoyé par email.
+                    </p>
+                    <a href="index.html">Retour à l'accueil</a>
                 </div>
-                <div class="book_cards">
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="cover">
-                            <a href="oeuvre_template.html"><img src="images/cover.png" alt="couverture"/></a>
-                        </div>
-                        <p class="title">
-                            Titre
-                        </p>
-                    </div>
-                </div>
-            </div>
+                
+            </div>  
         </main>
         <footer>
             <div id="copyright">
@@ -117,6 +61,6 @@
                 <span>Nous contacter : <a href="mailto:contact@bbiblio.com">contact@bbiblio.com</a></span>
             </div>
         </footer>
-        <script src="scripts/script.js"></script>
+        <script src="scripts/pass_oubli.js"></script>
     </body>
 </html>

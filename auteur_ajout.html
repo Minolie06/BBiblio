@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>BBiblio</title>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
@@ -37,11 +39,11 @@
                         <option value="docu">Documentaire</option>
                         <option value="bio">Biographie</option>
                     </select>
-                    <textarea id="synopsis" value="synopsis" placeholder="Synopsis de l'oeuvre" required></textarea>
+                    <textarea id="synopsis" placeholder="Synopsis de l'oeuvre" required></textarea>
                     <label for="cover">Téléverser la couverture : </label>
-                    <input type="file" value="cover" accept="images/*" />
+                    <input id="cover" type="file" accept="images/*" />
                     <label for="pdf">Téléverser le PDF de l'oeuvre : </label>
-                    <input type="file" value="pdf" accept=".pdf" />
+                    <input id="pdf" type="file" accept=".pdf" />
                     <button type="submit">Valider</button>
                 </form>
             </div>
@@ -63,6 +65,6 @@
                 <span>Nous contacter : <a href="mailto:contact@bbiblio.com">contact@bbiblio.com</a></span>
             </div>
         </footer>
-        <script src="script.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
